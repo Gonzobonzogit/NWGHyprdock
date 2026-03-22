@@ -1,0 +1,57 @@
+/* GLOBAL STYLES */
+window {
+    background-color: transparent;
+}
+
+/* THE DOCK CONTAINER (The Pill) */
+#box {
+    background-color: rgba(20, 20, 20, 0.9);
+    border-radius: 45px;
+    padding: 5px 10px;
+    
+    /* PURPLE NEON BORDER (Static) */
+    border: 2px solid #bd93f9;
+    box-shadow: 0 0 15px rgba(189, 147, 249, 0.4);
+}
+
+#active {
+	/* This is to underline the button representing the currently active window */
+	border-bottom: solid 1px;
+	border-color: rgba(255, 255, 255, 0.3)
+}
+
+/* BUTTONS (Icons) */
+button {
+    border: none;
+    box-shadow: none;
+    /* We start with a standard margin */
+    margin-top: 10px;    
+    margin-bottom: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 4px;
+	
+    
+    /* The Liquid Setup */
+    background-image: linear-gradient(to top, #8be9fd 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: top; /* Hidden by default */
+    
+    /* Smooth transition for margin (movement) and background (liquid) */
+    transition: all 0.2s ease-in-out;
+    border-radius: 99px;
+}
+
+/* THE HOVER ACTION */
+button:hover {
+    /* 1. The Liquid Fill */
+    background-position: bottom;
+    
+    /* 2. The Levitation (The GTK Way) */
+    /* We reduce top margin and add bottom margin to "push" it up */
+    margin-top: 0px;    
+    margin-bottom: 10px; 
+    
+    /* 3. The Glow */
+ /*   box-shadow: 0 10px 15px rgba(139, 233, 253, 0.4); */
+}
